@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout android:orientation="vertical"
+	android:layout_width="match_parent" android:layout_height="match_parent"
+	xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<LinearLayout android:orientation="horizontal"
+		android:background="@color/left" android:layout_width="match_parent"
+		android:layout_height="match_parent" android:layout_weight="1.0">
+		<ScrollView android:id="@+id/ScrollView01"
+			android:scrollbars="vertical" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:layout_weight="2.0">
+			<TextView android:id="@+id/in" android:layout_width="match_parent"
+				android:layout_height="wrap_content" android:textColor="@android:color/black" />
+		</ScrollView>
+		<LinearLayout android:orientation="vertical"
+			android:background="@color/right" android:layout_width="match_parent"
+			android:layout_height="match_parent" android:layout_weight="1.0">
+			<TextView android:layout_width="match_parent" android:id="@+id/tvStep"
+				android:text="0" android:textColor="@android:color/black"
+				android:textSize="150px" android:layout_height="wrap_content"
+				android:layout_gravity="center" />
+			<TextView android:layout_width="match_parent" android:id="@+id/tvAngle" android:textSize="150px"
+				android:layout_height="wrap_content" android:text="0.0" />
+		</LinearLayout>
+	</LinearLayout>
+
+	<LinearLayout android:orientation="horizontal"
+		android:layout_width="match_parent" android:layout_height="wrap_content">
+		<Button android:id="@+id/BtnConnect" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="Connect"
+			android:layout_weight="1.0" android:onClick="onConnectButtonClicked" />
+		<Button android:id="@+id/BtnSave" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="Save"
+			android:layout_weight="1.0" android:onClick="onSaveButtonClicked" />
+		<Button android:id="@+id/BtnStep" android:layout_weight="1.0"
+			android:layout_height="wrap_content" android:layout_width="match_parent"
+			android:text="Step" android:onClick="onStepButtonClicked" />
+		<Button android:id="@+id/BtnClear" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="Clear"
+			android:layout_weight="1.0" android:onClick="onClearButtonClicked" />
+		<Button android:id="@+id/BtnQuit" android:layout_width="match_parent"
+			android:layout_height="wrap_content" android:text="Exit"
+			android:layout_weight="1.0" android:onClick="onQuitButtonClicked" />
+	</LinearLayout>
+
+</LinearLayout>
